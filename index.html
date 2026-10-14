@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio da Ciência - 6º Ano</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonte divertida e legível do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="game-header">
+    <h1>🔬 Desafio da Ciência! 🧬</h1>
+    <p>Explore o mundo da ciência e vença o desafio!</p>
+  </header>
+
+  <main class="game-container">
+    
+    <!-- Tela Inicial -->
+    <section id="start-screen" class="screen active">
+      <h2>Bem-vindo, Cientista!</h2>
+      <p>Testes seus conhecimentos sobre o corpo humano, ecossistemas e a Terra!</p>
+      <button id="start-btn" class="btn btn-primary">Começar Jogo 🚀</button>
+    </section>
+
+    <!-- Tela do Jogo -->
+    <section id="quiz-screen" class="screen">
+      <div class="hud">
+        <div class="lives-container">
+          <span>Vidas:</span>
+          <span id="lives-display">❤️❤️❤️</span>
+        </div>
+        <div class="score-container">
+          <span>Pontos:</span>
+          <span id="score-display">0</span>
+        </div>
+      </div>
+
+      <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <div class="question-box">
+        <h3 id="question-text">Pergunta aqui...</h3>
+        <div id="options-container" class="options-grid">
+          <!-- Opções inseridas via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Tela Final -->
+    <section id="end-screen" class="screen">
+      <h2 id="end-title">Fim de Jogo!</h2>
+      <p id="end-message">Sua pontuação final:</p>
+      <div class="final-score" id="final-score">0</div>
+      <button id="restart-btn" class="btn btn-primary">Jogar Novamente 🔄</button>
+    </section>
+
+  </main>
+
+  <footer class="game-footer">
+    <p>Projeto de Ciências - 6º Ano do Ensino Fundamental</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

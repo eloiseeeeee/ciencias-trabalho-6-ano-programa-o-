@@ -1,0 +1,173 @@
+/* Reset e Configurações Globais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka', cursive, sans-serif;
+}
+
+body {
+  background-color: #e0f7fa;
+  color: #263238;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Cabecalho e Rodape */
+.game-header {
+  text-align: center;
+  padding: 20px;
+  background-color: #00bcd4;
+  color: white;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 5px solid #0097a7;
+}
+
+.game-header h1 {
+  font-size: 2.2rem;
+}
+
+.game-footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #0097a7;
+  color: white;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+/* Conteiner Principal */
+.game-container {
+  background: white;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 4px solid #4dd0e1;
+}
+
+/* Controle de Telas */
+.screen {
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.screen.active {
+  display: flex;
+}
+
+/* Painel de Informacoes (HUD) */
+.hud {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.lives-container, .score-container {
+  background: #f1f8e9;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 2px solid #c5e1a5;
+}
+
+/* Barra de Progresso */
+.progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background-color: #eceff1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #81c784;
+  transition: width 0.3s ease;
+}
+
+/* Caixa da Pergunta e Opcoes */
+.question-box {
+  width: 100%;
+}
+
+.question-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #00838f;
+}
+
+.options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Botoes */
+.btn {
+  padding: 14px 24px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background-color: #ff9800;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #f57c00;
+}
+
+.btn-option {
+  background-color: #e1f5fe;
+  color: #0277bd;
+  border: 2px solid #81d4fa;
+  text-align: left;
+  width: 100%;
+}
+
+.btn-option:hover {
+  background-color: #b3e5fc;
+}
+
+/* Feedback de Resposta */
+.btn-option.correct {
+  background-color: #a5d6a7 !important;
+  border-color: #4caf50 !important;
+  color: #1b5e20;
+}
+
+.btn-option.incorrect {
+  background-color: #ef9a9a !important;
+  border-color: #f44336 !important;
+  color: #b71c1c;
+}
+
+.final-score {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff9800;
+}
